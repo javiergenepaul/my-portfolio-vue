@@ -17,6 +17,7 @@
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.4.31",
+    "vue-i18n": "9",
     "vue-router": "4"
   },
   "devDependencies": {
