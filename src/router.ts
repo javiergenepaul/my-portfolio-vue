@@ -1,10 +1,23 @@
 import { createWebHistory, createRouter } from "vue-router";
+import { AboutSection, ContactSection, NotFound } from "./views";
 import HomeView from "./views/HomeView.vue";
-import AboutView from "./views/AboutView.vue";
+import { PATH } from "./config";
 
 const routes = [
-  { path: "/", name: "home", component: HomeView },
-  { path: "/about", name: "about", component: AboutView },
+  {
+    path: PATH.HOME.path,
+    name: PATH.HOME.name,
+    component: HomeView,
+    children: [
+      { path: PATH.ABOUT.path, name: PATH.ABOUT.name, component: AboutSection },
+      {
+        path: PATH.CONTACT.path,
+        name: PATH.CONTACT.name,
+        component: ContactSection,
+      },
+    ],
+  },
+  { path: "/:pathMatch(.*)*", name: "not-found", component: NotFound },
 ];
 
 const router = createRouter({
