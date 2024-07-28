@@ -4,7 +4,8 @@ import { RouterView } from 'vue-router'
 
 <template>
   <div class="flex">
-    <header class="basis-1/3">Header Here</header>
+    <header class="basis-1/3">{{ $t("helloWorld") }}</header>
+
     <body class="basis-2/3">
       <nav>
         <ul class="flex gap-2">
