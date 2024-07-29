@@ -1,18 +1,19 @@
 <script setup lang="ts">
+import { translate } from '@/lib';
 import { RouterView } from 'vue-router'
 </script>
 
 <template>
   <div class="flex">
-    <header class="basis-1/3">{{ $t("helloWorld") }}</header>
+    <header class="basis-1/3">{{ translate("helloWorld") }}</header>
 
     <body class="basis-2/3">
       <nav>
         <ul class="flex gap-2">
-          <li class="underline">About</li>
-          <li class="underline">Project</li>
-          <li class="underline">Skills</li>
-          <li class="underline">Contact</li>
+          <li class="underline">{{ translate("nav.about") }}</li>
+          <li class="underline">{{ translate("nav.project") }}</li>
+          <li class="underline">{{ translate("nav.skills") }}</li>
+          <li class="underline">{{ translate("nav.contact") }}</li>
         </ul>
       </nav>
       <RouterView />
