@@ -1,6 +1,5 @@
 import { createWebHistory, createRouter } from "vue-router";
-import { AboutSection, ContactSection, NotFound } from "./views";
-import HomeView from "./views/HomeView.vue";
+import { AboutSection, ContactSection, HomeView, NotFound } from "./views";
 import { PATH } from "./config";
 
 const routes = [
