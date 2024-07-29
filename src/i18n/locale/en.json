@@ -1,3 +1,9 @@
 {
-  "helloWorld": "Hello Worldwad"
+  "helloWorld": "Hello Worldwad",
+  "nav": {
+    "about": "About",
+    "project": "Project",
+    "skills": "Skills",
+    "contact": "Contact"
+  }
 }
