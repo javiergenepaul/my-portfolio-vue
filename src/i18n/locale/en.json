@@ -1,5 +1,9 @@
 {
   "helloWorld": "Hello Worldwad",
+  "home": {
+    "name": "Gene Paul Mar Javier",
+    "occupation": "Software Engineer"
+  },
   "nav": {
     "about": "About",
     "project": "Project",
