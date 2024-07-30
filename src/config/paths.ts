@@ -1,3 +1,5 @@
+import path from "path";
+
 export const BASE_URL_PREFIX: string = "/";
 
 export const PATH = {
@@ -8,6 +10,14 @@ export const PATH = {
   ABOUT: {
     name: "About",
     path: `${BASE_URL_PREFIX}about`,
+  },
+  PROJECT: {
+    name: "Project",
+    path: `${BASE_URL_PREFIX}project`
+  },
+  SKILLS: {
+    name: "Skills",
+    path: `${BASE_URL_PREFIX}skills`
   },
   NOT_FOUND: {
     name: "Page Not Found",
