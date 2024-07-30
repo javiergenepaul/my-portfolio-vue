@@ -1,5 +1,3 @@
-import path from "path";
-
 export const BASE_URL_PREFIX: string = "/";
 
 export const PATH = {
