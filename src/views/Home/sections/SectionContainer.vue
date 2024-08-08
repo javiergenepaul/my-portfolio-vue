@@ -1,20 +1,11 @@
 <script setup lang="ts">
-import { Card, CardContent, CardHeader } from '@/components';
-
-interface SectionContainerInterface {
-    title: string
-}
-
-const { title } = defineProps<SectionContainerInterface>()
+import { Card, CardContent } from '@/components';
 </script>
 
 <template>
-    <section class="mt-4 h-full">
+    <section class="h-full mt-4">
         <Card class="h-full">
-            <CardHeader>
-                {{ title }}
-            </CardHeader>
-            <CardContent>
+            <CardContent class="py-6">
                 <slot />
             </CardContent>
         </Card>
