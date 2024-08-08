@@ -27,5 +27,4 @@ const openLink = () => {
             </TooltipContent>
         </Tooltip>
     </TooltipProvider>
-
 </template>
