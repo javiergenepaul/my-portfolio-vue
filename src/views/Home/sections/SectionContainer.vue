@@ -9,8 +9,8 @@ const { title } = defineProps<SectionContainerInterface>()
 </script>
 
 <template>
-    <section class="mt-4">
-        <Card>
+    <section class="mt-4 h-full">
+        <Card class="h-full">
             <CardHeader>
                 {{ title }}
             </CardHeader>
