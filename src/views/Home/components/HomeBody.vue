@@ -4,6 +4,7 @@ import { PATH } from '@/config';
 import { translate } from '@/lib';
 import { RouterLink } from 'vue-router';
 
+const filteredRoutes = Object.values(PATH).filter(route => (route.name !== PATH.NOT_FOUND.name && route.name !== PATH.HOME.name));
 </script>
 
 <template>
@@ -11,10 +12,10 @@ import { RouterLink } from 'vue-router';
         <CardHeader>
             <nav class="flex justify-end">
                 <ul class="flex gap-2">
-                    <RouterLink :to="PATH.ABOUT.path" class="underline">{{ translate("nav.about") }}</RouterLink>
-                    <RouterLink :to="PATH.PROJECT.path" class="underline">{{ translate("nav.project") }}</RouterLink>
-                    <RouterLink :to="PATH.SKILLS.path" class="underline">{{ translate("nav.skills") }}</RouterLink>
-                    <RouterLink :to="PATH.CONTACT.path" class="underline">{{ translate("nav.contact") }}</RouterLink>
+                    <RouterLink v-for="route in filteredRoutes" :key="route.name" :to="route.path"
+                        class="text-foreground" exact-active-class="underline text-primary">
+                        {{ translate(`nav.${route.name.toLowerCase()}` as any) }}
+                    </RouterLink>
                 </ul>
             </nav>
         </CardHeader>

@@ -7,8 +7,13 @@ const routes = [
     path: PATH.HOME.path,
     name: PATH.HOME.name,
     component: View.HomeView,
+    redirect: PATH.ABOUT.path,
     children: [
-      { path: PATH.ABOUT.path, name: PATH.ABOUT.name, component: View.AboutSection },
+      {
+        path: PATH.ABOUT.path,
+        name: PATH.ABOUT.name,
+        component: View.AboutSection,
+      },
       {
         path: PATH.CONTACT.path,
         name: PATH.CONTACT.name,

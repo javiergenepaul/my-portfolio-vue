@@ -1,5 +1,9 @@
+<script setup lang="ts">
+import SectionContainer from './SectionContainer.vue';
+</script>
+
 <template>
-    <section>
+    <SectionContainer title="Contacts">
         Contact Section
-    </section>
+    </SectionContainer>
 </template>
