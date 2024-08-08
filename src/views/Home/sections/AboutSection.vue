@@ -3,7 +3,7 @@ import SectionContainer from './SectionContainer.vue';
 </script>
 
 <template>
-    <SectionContainer title="About Me">
+    <SectionContainer>
         About Section
     </SectionContainer>
 </template>
