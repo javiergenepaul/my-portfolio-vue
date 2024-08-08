@@ -1,5 +1,9 @@
+<script setup lang="ts">
+import SectionContainer from './SectionContainer.vue';
+</script>
+
 <template>
-    <section>
+    <SectionContainer title="About Me">
         About Section
-    </section>
+    </SectionContainer>
 </template>

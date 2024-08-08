@@ -17,10 +17,6 @@ const CONTACT_INFOS: ContactInfoInterface[] = [
         title: "BIRTHDATE",
         value: "July 20, 1998"
     },
-    // {
-    //     title: "LOCATION",
-    //     value: "San Isidro Labrador, Quiot Greenbelt Drive St. Cebu City, Cebu Philippines"
-    // }
 ]
 
 const SOCIAL_LINKS: SocialLinksInterface[] = [
@@ -41,7 +37,7 @@ const SOCIAL_LINKS: SocialLinksInterface[] = [
 </script>
 
 <template>
-    <Card class="h-full">
+    <Card class="h-full flex-1">
         <CardHeader class="items-center">
             <Avatar size="lg">
                 <AvatarImage src="https://github.com/radix-vue.png" alt="@radix-vue" />
@@ -57,12 +53,11 @@ const SOCIAL_LINKS: SocialLinksInterface[] = [
                     :value="contact.value" />
             </div>
         </CardContent>
-        <CardFooter class="mt-28 justify-center">
+        <CardFooter class="mt-4 justify-center">
             <div class="flex items-center justify-center gap-4">
                 <SocialLinks v-for="(social, index) in SOCIAL_LINKS" :key="index" :title="social.title"
                     :url="social.url" />
             </div>
         </CardFooter>
     </Card>
-
 </template>
