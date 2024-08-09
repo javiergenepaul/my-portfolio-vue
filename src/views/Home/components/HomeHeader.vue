@@ -4,6 +4,7 @@ import { translate } from '@/lib';
 import ContactInfo, { ContactInfoInterface } from './ContactInfo.vue';
 import SocialLinks, { SocialLinksInterface } from './SocialLinks.vue';
 
+// TODO:: translate
 const CONTACT_INFOS: ContactInfoInterface[] = [
     {
         title: "EMAIL",
@@ -19,6 +20,7 @@ const CONTACT_INFOS: ContactInfoInterface[] = [
     },
 ]
 
+// TODO:: translate
 const SOCIAL_LINKS: SocialLinksInterface[] = [
     {
         title: "Github",
@@ -37,23 +39,26 @@ const SOCIAL_LINKS: SocialLinksInterface[] = [
 </script>
 
 <template>
-    <Card class="h-full flex-1">
-        <CardHeader class="items-center">
-            <Avatar size="lg">
-                <AvatarImage src="https://github.com/radix-vue.png" alt="@radix-vue" />
-                <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-            <h1 class="text-2xl font-bold">{{ translate("home.name") }}</h1>
-            <Badge>{{ translate("home.occupation") }}</Badge>
-            <Separator class="mt-4" />
-        </CardHeader>
-        <CardContent>
-            <div class="flex flex-col gap-4">
-                <ContactInfo v-for="(contact, index) in CONTACT_INFOS" :key="index" :title="contact.title"
-                    :value="contact.value" />
-            </div>
-        </CardContent>
-        <CardFooter class="mt-4 justify-center">
+    <Card class="h-full flex px-6 flex-col justify-between">
+        <div>
+            <CardHeader class="items-center">
+                <Avatar size="lg">
+                    <!-- TODO: add avatar here -->
+                    <AvatarImage src="https://github.com/radix-vue.png" alt="@radix-vue" />
+                    <AvatarFallback>GPM</AvatarFallback>
+                </Avatar>
+                <h1 class="text-2xl font-bold">{{ translate("home.name") }}</h1>
+                <Badge>{{ translate("home.occupation") }}</Badge>
+                <Separator class="mt-4" />
+            </CardHeader>
+            <CardContent>
+                <div class="flex flex-col gap-4">
+                    <ContactInfo v-for="(contact, index) in CONTACT_INFOS" :key="index" :title="contact.title"
+                        :value="contact.value" />
+                </div>
+            </CardContent>
+        </div>
+        <CardFooter class="justify-center">
             <div class="flex items-center justify-center gap-4">
                 <SocialLinks v-for="(social, index) in SOCIAL_LINKS" :key="index" :title="social.title"
                     :url="social.url" />
