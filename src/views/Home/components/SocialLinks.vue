@@ -4,6 +4,8 @@ import { Avatar, AvatarFallback, AvatarImage, Tooltip, TooltipContent, TooltipPr
 export interface SocialLinksInterface {
     url: string;
     title: string;
+    avatarImage: string;
+    avatarFallback: string;
 }
 
 const props = defineProps<SocialLinksInterface>();
@@ -18,8 +20,8 @@ const openLink = () => {
         <Tooltip>
             <TooltipTrigger @click="openLink">
                 <Avatar>
-                    <AvatarImage src="https://github.com/radix-vue.png" alt="@radix-vue" />
-                    <AvatarFallback>CN</AvatarFallback>
+                    <AvatarImage :src="props.avatarImage" alt="@radix-vue" />
+                    <AvatarFallback>{{ props.avatarFallback }}</AvatarFallback>
                 </Avatar>
             </TooltipTrigger>
             <TooltipContent>

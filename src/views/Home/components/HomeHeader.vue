@@ -7,32 +7,38 @@ import SocialLinks, { SocialLinksInterface } from './SocialLinks.vue';
 // TODO:: translate
 const CONTACT_INFOS: ContactInfoInterface[] = [
     {
-        title: "EMAIL",
-        value: "javiergenepaul@gmail.com"
+        title: translate("home.contactInfo.email"),
+        value: "email@gmail.com"
     },
     {
-        title: "PHONE",
-        value: "+639 762 912 231"
+        title: translate("home.contactInfo.phone"),
+        value: "+639 XXX XXX XXX"
     },
     {
-        title: "BIRTHDATE",
-        value: "July 20, 1998"
+        title: translate("home.contactInfo.birthDate"),
+        value: "MM DD, YYYY"
     },
 ]
 
 // TODO:: translate
 const SOCIAL_LINKS: SocialLinksInterface[] = [
     {
-        title: "Github",
-        url: "https://github.com/javiergenepaul"
+        title: translate("home.socialLinks.github"),
+        url: "https://github.com/javiergenepaul",
+        avatarImage: "https://github.com/radix-vue.png",
+        avatarFallback: "GH"
     },
     {
-        title: "LinkedIn",
-        url: "https://www.linkedin.com/in/gene-paul-mar-javier-500b93245/"
+        title: translate("home.socialLinks.linkedIn"),
+        url: "https://www.linkedin.com/in/gene-paul-mar-javier-500b93245/",
+        avatarImage: "https://github.com/radix-vue.png",
+        avatarFallback: "LI"
     },
     {
-        title: "Upwork",
-        url: "https://www.upwork.com/freelancers/~0146c967e12a6bff87"
+        title: translate("home.socialLinks.upwork"),
+        url: "https://www.upwork.com/freelancers/~0146c967e12a6bff87",
+        avatarImage: "https://github.com/radix-vue.png",
+        avatarFallback: "UP"
     }
 ]
 
@@ -45,10 +51,10 @@ const SOCIAL_LINKS: SocialLinksInterface[] = [
                 <Avatar size="lg">
                     <!-- TODO: add avatar here -->
                     <AvatarImage src="https://github.com/radix-vue.png" alt="@radix-vue" />
-                    <AvatarFallback>GPM</AvatarFallback>
+                    <AvatarFallback>{{ translate("home.initial") }}</AvatarFallback>
                 </Avatar>
                 <h1 class="text-2xl font-bold">{{ translate("home.name") }}</h1>
-                <Badge>{{ translate("home.occupation") }}</Badge>
+                <Badge class="hover:cursor-pointer">{{ translate("home.occupation") }}</Badge>
                 <Separator class="mt-4" />
             </CardHeader>
             <CardContent>
@@ -61,7 +67,7 @@ const SOCIAL_LINKS: SocialLinksInterface[] = [
         <CardFooter class="justify-center">
             <div class="flex items-center justify-center gap-4">
                 <SocialLinks v-for="(social, index) in SOCIAL_LINKS" :key="index" :title="social.title"
-                    :url="social.url" />
+                    :url="social.url" :avatar-image="social.avatarImage" :avatar-fallback="social.avatarFallback" />
             </div>
         </CardFooter>
     </Card>

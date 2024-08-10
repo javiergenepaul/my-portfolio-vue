@@ -2,7 +2,18 @@
   "helloWorld": "Hello Worldwad",
   "home": {
     "name": "Gene Paul Mar Javier",
-    "occupation": "Software Engineer"
+    "occupation": "Software Engineer",
+    "initial": "GPM",
+    "contactInfo": {
+      "email": "EMAIL",
+      "phone": "PHONE",
+      "birthDate": "BIRTHDATE"
+    },
+    "socialLinks": {
+      "github": "Github",
+      "linkedIn": "LinkedIn",
+      "upwork": "Upwork"
+    }
   },
   "nav": {
     "about": "About",
