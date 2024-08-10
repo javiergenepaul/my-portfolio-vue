@@ -34,11 +34,17 @@ const SOCIAL_LINKS: SocialLinksInterface[] = [
         avatarImage: "https://github.com/radix-vue.png",
         avatarFallback: "LI"
     },
+    // {
+    //     title: translate("home.socialLinks.upwork"),
+    //     url: "https://www.upwork.com/freelancers/~0146c967e12a6bff87",
+    //     avatarImage: "https://github.com/radix-vue.png",
+    //     avatarFallback: "UP"
+    // },
     {
-        title: translate("home.socialLinks.upwork"),
-        url: "https://www.upwork.com/freelancers/~0146c967e12a6bff87",
+        title: translate("home.socialLinks.portfolio"),
+        url: "https://paul-javier-portfolio.netlify.app/",
         avatarImage: "https://github.com/radix-vue.png",
-        avatarFallback: "UP"
+        avatarFallback: "GPM"
     }
 ]
 
